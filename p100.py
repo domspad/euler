@@ -36,6 +36,21 @@ def sq_sol(k):
 	return int(y) == y
 
 # brute
+# ~2 hrs before went to this solution
+
+#all less than 4,500,000,000: at ~ 2 sec per million (grows with number size)
+# 4
+# 21
+# 120
+# 697
+# 4060
+# 23661
+# 137904
+# 803761
+# 4684660
+# 27304197
+# 159140520
+# 927538921
 
 def eqs(b=b,r=r):
 	return b**2 - b - 2*b*r - r**2 +r
@@ -45,15 +60,18 @@ def check(m):
 	r = m - b
 	return eqs(b,r) == 0
 
+from time import time
 def check_from(m=None):
 	"""
 	Start checking solutions starting from m = 1 trilllion
 	"""
+	st = time()
 	if m == None:
 		m = LIM
 	while True:
 		if check(m):
-			return m
-		if m % 1000000 == 0:
 			print m
+		if m % 1000000 == 0:
+			print '\t\t\t', time() - st, '\t\t\t',m
 		m += 1
+
