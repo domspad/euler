@@ -1,5 +1,6 @@
 # compile using `python setup_cyp100.py build_ext --inplace`
 # then can import like any other python module!
+# runs about 1 million every 0.25 sec ~10x faster
 
 from math import sqrt 
 from time import time
