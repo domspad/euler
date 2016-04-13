@@ -1,6 +1,6 @@
 
 
-# brute force - (from p3)
+# brute force - (from p3) 20 mins to answer
 # In [31]: %time sum(primes_lt3(2000000))
 # CPU times: user 30.5 s, sys: 122 ms, total: 30.6 s
 # Wall time: 31.1 s

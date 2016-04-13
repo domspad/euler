@@ -1,5 +1,5 @@
 
-# BRUTE Force - alg from p3...
+# BRUTE Force - alg from p3... 10 mins
 # In [35]: %time p7()
 # 10 0
 # 20 8
