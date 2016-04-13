@@ -37,8 +37,11 @@ def sq_sol(k):
 
 # brute
 # ~2 hrs before went to this solution
+# ANS
 
 #all less than 4,500,000,000: at ~ 2 sec per million (grows with number size)
+							   # ~ 5 sec per million once we hit 1 trillion!
+							   	# at 70 billiion...
 # 4
 # 21
 # 120
@@ -52,26 +55,32 @@ def sq_sol(k):
 # 159140520
 # 927538921
 
-def eqs(b=b,r=r):
-	return b**2 - b - 2*b*r - r**2 +r
+# def eqs(b=b,r=r):
+# 	return b**2 - b - 2*b*r - r**2 +r
+
+# 	~5 sec per million! --> 70 bill ~ 350,000 secs! --> 4 days
+ 			# 5.554500103 			1030001000000
+			# 5.46113204956 			1030002000000
+			# 5.2989628315 			1030003000000
+			# 5.3919968605 			1030004000000
 
 def check(m):
 	b = int(m / sqrt(2)) + 1
 	r = m - b
-	return eqs(b,r) == 0
+	return b**2 - b - 2*b*r - r**2 +r == 0
 
 from time import time
-def check_from(m=None):
+def p100():
 	"""
-	Start checking solutions starting from m = 1 trilllion
+	Start checking solutions starting from m = 1 trillion, return the first valid m
 	"""
 	st = time()
-	if m == None:
-		m = LIM
+	m = 10 ** 12
 	while True:
 		if check(m):
-			print m
+			return m
 		if m % 1000000 == 0:
 			print '\t\t\t', time() - st, '\t\t\t',m
+			st = time()
 		m += 1
 

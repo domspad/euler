@@ -1,3 +1,5 @@
+import numpy as np
+
 array = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -19,37 +21,63 @@ array = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 
-# read array into numpy array
-import numpy as np
-ar = np.array(map(lambda l: map(int,l),map(str.split,array.split('\n'))))
+# Brute force ~ 45 mins~ (some debugging..)
+# In [19]: %time p11()
+# CPU times: user 17.4 ms, sys: 3.14 ms, total: 20.5 ms
+# Wall time: 18.7 ms
+# Out[19]: 70600674
 
-# value ud, r, dd, d
-
-def values(start,step,array,ln):
+def slice_sum(ar, start, step, n):
 	"""
-	returns the value of ln lengthed strip starting from start index in array steping vertically by v and horiz by h each time
-	if doesn't fit, then return 0
+	Return the value of summing the elements from start index along n steps in the array.
+		if out of bounds return 0
 	"""
-	x,y = start
-	v,w = step
 	try:
-		v = 0
-		for i in xrange(ln):
-			print '\t', array[x + i*v, y + i*w]
-			v += array[x + i*v, y + i*w]
-		print start, step, v
-		return v
-	except IndexError: 
+		step_values = []
+		for i in xrange(n):
+			next_idx = (start[0] + i * step[0], start[1] + i * step[1])
+			step_values.append(ar[next_idx])
+		return reduce(lambda x,y: x*y, step_values, 1)
+	except:
 		return 0
 
-vals = []
 def p11():
+	ar = np.array(map(lambda l: map(int,l),map(str.split,array.split('\n'))))
+	steps = [(1,1),(0,1),(1,-1),(0,-1)]
+
+	nrows, ncols = ar.shape
+	values = [slice_sum(ar, (i,j), step, n=4) for i in xrange(nrows)
+											  for j in xrange(ncols)
+											  for step in steps]
+	return max(values)
+
+
+
+# def values(start,step,array,ln):
+# 	"""
+# 	returns the value of ln lengthed strip starting from start index in array steping vertically by v and horiz by h each time
+# 	if doesn't fit, then return 0
+# 	"""
+# 	x,y = start
+# 	v,w = step
+# 	try:
+# 		v = 0
+# 		for i in xrange(ln):
+# 			print '\t', array[x + i*v, y + i*w]
+# 			v += array[x + i*v, y + i*w]
+# 		print start, step, v
+# 		return v
+# 	except IndexError: 
+# 		return 0
+
+# vals = []
+# def p11():
 
 	
-	for x in xrange(ar.shape[0]):
-		for y in xrange(ar.shape[1]):
-			for step in [(1,1),(1,0),(1,-1),(0,-1)]:
-				vals.append(values((x,y),step, ar, 4))
-	return max(vals)
+# 	for x in xrange(ar.shape[0]):
+# 		for y in xrange(ar.shape[1]):
+# 			for step in [(1,1),(1,0),(1,-1),(0,-1)]:
+# 				vals.append(values((x,y),step, ar, 4))
+# 	return max(vals)
 
 
