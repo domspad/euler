@@ -1,0 +1,27 @@
+
+			real (wall)			Xspeedup
+control		0m7.355s			1
+pypy 		0m0.193s			38
+
+
+
+
+control (sol_01.py)
+	
+	(Canopy 64bit) [euler]$ time python sol_01.py 
+	real	0m7.355s
+	user	0m7.253s
+	sys	0m0.054s
+
+
+with pypy  
+
+	inst:
+		download  http://pypy.org/download.html#default-with-a-jit-compiler
+		unzip
+		run!
+
+	(Canopy 64bit) [euler]$ time ../pypy-5.0.1-osx64/bin/pypy sol_01.py
+	real	0m0.193s
+	user	0m0.154s
+	sys	0m0.030s
