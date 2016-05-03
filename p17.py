@@ -1,5 +1,5 @@
 
-# Debugging... 35 mins
+# with Debugging... 45 mins
 
 ones = [''] + 'one two three four five six seven eight nine'.split()
 teens = 'ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split()
@@ -23,15 +23,10 @@ def count(i):
 		print i, ones[i/100] + 'hundredand'
 		return len(ones[i / 100] + 'hundredand') + count(i % 100)
 
-total = sum(count(n) for n in xrange(1,1000))
-
-total += len('one thousand'.replace(' ',''))
-print total
-
 def p17():
 	total = sum(count(n) for n in xrange(1,1000))
 
-	# total += len('one thousand'.replace(' ',''))
+	total += len('one thousand'.replace(' ',''))
 	print total
 
 p17()
