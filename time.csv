@@ -33,16 +33,16 @@ num,difficulty,to_complete,wall_time
 32,5,15,0.788
 33,5,18,0.0269
 34,5,9,264
-35,5,,
-36,5,,
-37,5,,
-38,5,,
-39,5,,
-40,5,12,0.272
-41,5,,
-42,5,,
-43,5,,
-44,5,,
+35,5,15,12.6				# brute on primes
+36,5,,				# brute nums with palindrome helper
+37,5,,				# brute on primes (but proof harder)
+38,5,,				# brute
+39,5,,				# brute
+40,5,12,0.272		# brute
+41,5,,				# brute on pandigitals
+42,5,,				# brute
+43,5,,				# brute
+44,5,,				# brute
 45,5,,
 46,5,,
 47,5,,
