@@ -39,11 +39,11 @@ num,difficulty,to_complete,wall_time
 38,5,14,11.4				# brute
 39,5,12,0.296				# brute
 40,5,12,0.272		# brute
-41,5,,				# brute on pandigitals
-42,5,,				# brute
-43,5,,				# brute
-44,5,,				# brute
-45,5,,
+41,5,25,2.1			# brute on pandigitals
+42,5,10,0.021				# brute
+43,5,8,10.6				# brute
+44,5,6,18.8				# brute
+45,5,5,1.17
 46,5,,
 47,5,,
 48,5,,
