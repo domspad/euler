@@ -1,7 +1,7 @@
 
 # 2 hours to complete
 # simulation solution to get probabilities (first corraborate results with 6-sided, then used that number of trials to get 4-sided)
-# NOTE: BECAUSE statistically, not right all the time!!! e.g.
+# NOTE: BECAUSE statistically, not right all the time!!! should be 10, 15, 24... (i keep getting 10,24,15...)
 # In [1]: time %run p84.py
 # [(10, 598015), (24, 326810), (15, 325691)]
 # CPU times: user 1min 3s, sys: 522 ms, total: 1min 4s
@@ -143,4 +143,4 @@ for turn in xrange(10000000):
 
 print c.most_common(3)
 
-sorted(map(lambda x: (x[0],x[1]/10000000.),map(list,c.items())),key=lambda x:x[1],reverse=True)[:3]
+print sorted(map(lambda x: (x[0],x[1]/10000000.),map(list,c.items())),key=lambda x:x[1],reverse=True)[:3]

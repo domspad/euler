@@ -96,7 +96,7 @@ def phi_factors(n):
 def p72_factor():
 	return sum(phi_factors(n) for n in xrange(2,N))
 
-print p72_factor()
+# print p72_factor()
 
 
 
