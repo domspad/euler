@@ -6,6 +6,10 @@
 # CPU times: user 9min 1s, sys: 3.61 s, total: 9min 5s
 # Wall time: 9min 24s
 
+# 190569291 (NUMBER OF partitions of 100)
+	# while True:
+	# 	part = next_partition(part,N)
+# 10*190569291=1905692910 guess at average length of partitions ~ 20 for 100  (so take half length)
 
 
 class NoBoundary(Exception):

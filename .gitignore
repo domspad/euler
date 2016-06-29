@@ -64,3 +64,8 @@ target/
 
 #cProfiles
 *.out
+
+euler_speedup_work
+floating.py
+problems
+threads

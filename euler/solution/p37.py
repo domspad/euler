@@ -6,6 +6,16 @@
 # CPU times: user 12.4 s, sys: 113 ms, total: 12.5 s
 # Wall time: 12.7 s
 
+
+# In [10]: int(sum(sqrt(i) for i in xrange(2,1000000)))
+# Out[10]: 666666165
+	# xrange(2, 1000000) * xrange(2,sqrt(i))
+# In [196]: sum(len(str(p)) for p in PRIME_LIST)
+# Out[196]: 459970
+	# PRIME_LIST * xrange(1,len(str_p))
+#TOTAL == 667126135
+
+
 from math import sqrt
 
 def primes_lt3(N):

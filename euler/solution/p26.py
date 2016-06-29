@@ -51,6 +51,6 @@ ll = [(i,repeat_length(1,i)) for i in xrange(2,1000)]
 ll.sort(key=lambda x:x[1])
 
 
-decimal(1,3) = '0.' + '3'*98
-decimal(6,5) = '1.2'
-decimal(1,13) = '0.' + '076923'*16 + '07'
+# decimal(1,3) = '0.' + '3'*98
+# decimal(6,5) = '1.2'
+# decimal(1,13) = '0.' + '076923'*16 + '07'

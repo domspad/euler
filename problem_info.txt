@@ -1,0 +1,39 @@
+commands to clean threads
+^\w\w\w, \d+.*\n.*\n.*\n.*\n\s+.*
+Show Co.*\n.*\n.*
+cat 107_text.txt | tr '[:upper:]' '[:lower:]' |  tr -s '[:blank:]' ' ' | tr -cd '[:alpha:] ' | tr ' ' '\n' | sort
+tr -c '[:alpha:]' '[\n*]' < 107_text.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | less
+
+
+60,
+
+67,maximum path sum II,graph
+	Bellman–Ford algorithm
+	dijkstra
+	dynamic programming
+	kruskal
+
+69,totient maximum,number theory
+	prime
+	gcd
+
+71,ordered fractions,number theory
+	prime
+	gcd
+
+72,counting fractions,number theory
+	prime
+	gcd
+
+81,path sum: two ways,graph
+	dynamic programming
+	directed graph with dijkstra shortest path
+
+102,triangle containment,computational geometry
+	barycentric
+	heron's formula
+
+107,minimal network,search
+	minimum spanning tree
+	kruskal's algorithm	greedy
+	prim's algorithm	greedy

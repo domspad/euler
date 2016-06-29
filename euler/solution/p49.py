@@ -7,6 +7,11 @@
 # CPU times: user 47.1 s, sys: 148 ms, total: 47.2 s
 # Wall time: 47.4 s
 
+
+# In [187]: len(list(combinations(CANDIDATES,3)))
+# Out[187]: 198502490
+
+
 from math import sqrt
 
 def primes_lt3(N):

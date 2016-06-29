@@ -1,5 +1,10 @@
 
 
+# In [1]: %time %run p68.py
+# 28797161103104548
+# CPU times: user 6.97 s, sys: 48.3 ms, total: 7.02 s
+# Wall time: 7.09 s
+
 # brute force --- 57 mins in and debugging
 
 # gen all perms of 1, 2, 3..., 10
@@ -35,4 +40,21 @@ def p68():
 			if len(magic_str) == 16:
 				SOLUTIONS.append(magic_str)
 	return max(map(int, SOLUTIONS))
+
+
+EQS = map(lambda l: map(int,l),map(list,'056,167,278,389,495'.split(',')))
+def is_solution(perm10):
+	return len(set(map(lambda inds: sum(perm10[i] for i in inds), EQS))) == 1
+
+
+STRING_INDEXES = map(int, list('056167278389495'))
+def gen_string(perm):
+	return int(''.join(map(str, (perm[i] for i in STRING_INDEXES))))
+
+# for perm in permutations(xrange(1,11)):
+# 	if min(perm[:5]) == perm[0] and is_solution(perm):
+# 		print perm, gen_string(perm)
+
+print max(gen_string(perm) for perm in permutations(xrange(1,11))
+							if min(perm[:5]) == perm[0] and is_solution(perm))
 

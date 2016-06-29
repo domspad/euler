@@ -6,6 +6,9 @@
 # CPU times: user 7.84 s, sys: 42 ms, total: 7.88 s
 # Wall time: 7.92 s
 
+# In [188]: len(xrange(10, 1000000))
+# Out[188]: 999990
+
 # notice that there IS an upperbound such that it cant be true, but didnt try to analytically find it
 
 def is_5th_power_sum(num):
