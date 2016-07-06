@@ -5,7 +5,7 @@
 # Wall time: 24.1 s
 
 
-#### NEEDED TO USE PYTHON 3?!!?!!
+#### NEEDED TO USE PYTHON 3?!!?!! Okay, actually COULD use 'int' for python2 version to get right answer...
 ### because the 'floor' function in python2 returns float which doesnt have enough precision (in py 3 it returns int)
 from math import sqrt, floor
 import decimal
@@ -16,7 +16,7 @@ SQRT5 = Decimal.sqrt(Decimal(5))
 PHI = (Decimal(1) + SQRT5) / Decimal(2)
 
 def fib(n):
-	return floor( ((PHI**n)/SQRT5) + Decimal(0.5) ) 
+	return floor( ((PHI**n)/SQRT5) + Decimal(0.5) )   #could also use 'int' here
 
 def trunc_fib_gen():
 	"""Just the first 9 digits of each fib number"""
