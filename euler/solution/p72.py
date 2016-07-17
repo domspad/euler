@@ -1,6 +1,6 @@
 
 
-
+# -20 mins
 
 # first wanna get formula for phi...
 
