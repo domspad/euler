@@ -29,7 +29,7 @@
     # # concatenate them into one large file
 
 
-PRIMES = map(int, open('primes1.txt', 'r').read().split())
+PRIMES = map(int, open('../../solution_input/p60_primes.txt', 'r').read().split())
 PRIMES_SET = set(PRIMES)
 
 from math import log10
@@ -116,4 +116,10 @@ def build_Knp1(Kn):
 K4 = build_Knp1(K3)
 K5 = build_Knp1(K4)
 
+for cand in K5:
+    print cand, sum(cand)
 
+# (13, 5197, 5701, 6733, 8389) 26033 << this one!
+# (1973, 4877, 5711, 8291, 8573) 29425
+# (1399, 3037, 3433, 4987, 8461) 21317
+# (1483, 1993, 3457, 5869, 8209) 21011

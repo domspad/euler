@@ -13,9 +13,9 @@
 # Wall time: 2.96 s
 
 
-case_ans = {'../../problem_input/p082_small.txt':4,
-			'../../problem_input/p082_small2.txt':4,
-			'../../problem_input/p082_big.txt':994}
+case_ans = {'../../solution_input/p082_small.txt':4,
+			'../../solution_input/p082_small2.txt':4,
+			'../../solution_input/p082_big.txt':994}
 			# 'p082_matrix.txt':
 
 
@@ -25,7 +25,7 @@ case_ans = {'../../problem_input/p082_small.txt':4,
 
 import numpy as np
 
-fname = '../../problem_input/p082_matrix.txt'
+fname = '../../solution_input/p082_matrix.txt'
 # read in matrix
 with open(fname, 'rb') as f:
 	mat = np.loadtxt(f,delimiter=",").tolist()

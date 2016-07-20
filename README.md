@@ -5,6 +5,8 @@ These are my solutions to [project euler](https://projecteuler.net/) problems in
 
 I'm now working on refactoring the solutions and factoring out common functions and code to identify the underlying functions I used in many solutions. 
 
+`problems/` is a mirror of the problems on the website (in case it ever goes down)
+
 ##Analyse data!
 
 ```
