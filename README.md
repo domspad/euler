@@ -1,5 +1,11 @@
 
-Analyse data!
+## Project Euler
+
+These are my solutions to [project euler](projecteuler.net) problems in Python. My main goal was to obtain the solution as fast as possible, whatever means necessary (i.e. get the solution first, then worry about code structure and layout). I would record the times from when I started the problem, to when I had the solution. These are listed in `time.csv`. I would also record the runtime of the code.
+
+I'm now working on refactoring the solutions and factoring out common functions and code to identify the underlying functions I used in many solutions. 
+
+##Analyse data!
 
 ```
 import pandas as pd
