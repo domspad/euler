@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 # 96 mins
 # 60 mins trying to smart brute force it...
